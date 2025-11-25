@@ -38,4 +38,6 @@ async function singUpEagle(){
     const data = await response.json()
 
     alert(data.Message)
+
+    window.location.href = "../index.html"
 }

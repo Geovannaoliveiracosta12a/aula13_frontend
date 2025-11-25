@@ -1,10 +1,7 @@
-const button = document.querySelector("button")
-button.addEventListener("click", receiveData)
-
 async function receiveData() {
-   const persons = await fetch("http://localhost:3333/").then(response => response.json())
+   const users = await fetch("http://localhost:3333/").then(response => response.json())
 
-   persons.map(persons => {
+   users.map(persons => {
     document.querySelector("main").innerHTML += `
        <section>
             <h2>Name: ${persons.name}</h2>
@@ -15,3 +12,5 @@ async function receiveData() {
     `
    })
 }
+
+receiveData()
