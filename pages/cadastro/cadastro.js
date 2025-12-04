@@ -38,5 +38,5 @@ async function singUpEagle(){
 
     alert(data.Message)
 
-    window.location.href = "../index.html"
+    window.location.href = "../../index.html"
 }
