@@ -28,9 +28,23 @@ async function login(){
         body: JSON.stringify(user)
     })
 
-   // const data = await response.json()
+    const data = await response.json()
+console.log(data) 
 
-    //alert(data.Message)
+    if (data.message){
+        alert(data.message)
+        window.location.reload()
+        return
+    }
 
-    //window.location.href = "../index.html"
+    const {id, name } = data
+
+    sessionStorage.setItem("user", JSON.stringify({id, name}))
+
+
+
+alert(data.message);
+
+window.location.href = "../../index.html"
+
 }
