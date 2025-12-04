@@ -9,7 +9,7 @@ async function login(){
 
     const password = document.querySelector("#password").value
 
-    if (email === "" || age === "" || password === ""){
+    if (email === "" || password === ""){
         alert("Preencha TODAS as informações!")
         return
     }
@@ -19,9 +19,7 @@ async function login(){
         password
     }
 
-    console.log(user)
-
-    const response = await fetch("https://aula13-backend.vercel.app/cadastrar", {
+    const response = await fetch("https://aula13-backend.vercel.app/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -30,9 +28,9 @@ async function login(){
         body: JSON.stringify(user)
     })
 
-    const data = await response.json()
+   // const data = await response.json()
 
-    alert(data.Message)
+    //alert(data.Message)
 
-    window.location.href = "../index.html"
+    //window.location.href = "../index.html"
 }
