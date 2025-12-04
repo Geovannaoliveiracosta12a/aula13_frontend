@@ -43,7 +43,7 @@ console.log(data)
 
 
 
-alert(data.message);
+alert("login efetuado com sucesso");
 
 window.location.href = "../../index.html"
 
