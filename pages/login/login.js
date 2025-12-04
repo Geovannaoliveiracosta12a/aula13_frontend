@@ -1,26 +1,21 @@
 const button = document.querySelector("button")
 button.onclick = (event) => {
     event.preventDefault()
-    singUpEagle()
+    login()
 }
 
-async function singUpEagle(){
-    const name = document.querySelector("#name").value
+async function login(){
     const email = document.querySelector("#email").value
-    const age = document.querySelector("#age").value
-    const nickname = document.querySelector("#nickname").value
+
     const password = document.querySelector("#password").value
 
-    if (name === "" || email === "" || age === "" || nickname === ""){
+    if (email === "" || age === "" || password === ""){
         alert("Preencha TODAS as informações!")
         return
     }
 
     const user = {
-        name,
         email,
-        age,
-        nickname, 
         password
     }
 
